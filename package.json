@@ -5,7 +5,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "start": "node ./app.js"
+    "build": "npm install",
+    "dev": "node ./app.js"
   },
   "dependencies": {
     "@apollo/server": "^4.11.0",
