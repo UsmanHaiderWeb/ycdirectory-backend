@@ -30,7 +30,7 @@ const createBlogController = async (req, res) => {
             return res.status(500).json({ message: 'Failed to create blog' });
         }
         req.user.blogs.unshift(newBlog._id);
-        await req.user();
+        await req.user.save();
         res.status(201).json({message: 'Blog has been created.', newBlog});
     } catch (error) {
         console.log(error);
