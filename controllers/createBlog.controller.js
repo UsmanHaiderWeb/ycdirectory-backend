@@ -19,7 +19,7 @@ const createBlogController = async (req, res) => {
         const newBlog = await Blog.create({
             title,
             description,
-            caption: '',
+            caption: 'caption',
             categories,
             tags,
             image: cloudinaryResponse?.secure_url,
