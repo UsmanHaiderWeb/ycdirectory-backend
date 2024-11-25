@@ -15,10 +15,10 @@ export const upload = multer({storage});
 
 blogRouter.post('/blog/create', [authenticate, upload.single('image')], createBlogController);
 blogRouter.post('/blog/review', authenticate, reviewBlogController);
-blogRouter.put('/blog/like', authenticate, likeBlogController);
-blogRouter.put('/blog/unlike', authenticate, unlikeBlogController);
-blogRouter.put('/blog/save', authenticate, saveBlogController);
-blogRouter.put('/blog/unsave', authenticate, unsaveBlogController);
+blogRouter.post('/blog/like', authenticate, likeBlogController);
+blogRouter.post('/blog/unlike', authenticate, unlikeBlogController);
+blogRouter.post('/blog/save', authenticate, saveBlogController);
+blogRouter.post('/blog/unsave', authenticate, unsaveBlogController);
 
 
 blogRouter.post('/app/review', authenticate, reviewAppController);
